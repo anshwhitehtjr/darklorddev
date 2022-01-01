@@ -8,13 +8,13 @@ export default function Navbar ({ mode, title }) {
     let location = useLocation();
 
     return (
-        <Popover className="relative bg-white">
+        <Popover className="relative z-10 bg-white sticky">
             <div className="mx-auto px-4 sm:px-6">
                 <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
                         <Link to="/">
                             <span className="sr-only">{ title }</span>
-                            <h5 className='text-2xl' >{ title }</h5>
+                            <img style={ { width: '100px', borderRadius: "50px" } } src="/static/logo.png" alt={ title } />
                         </Link>
                     </div>
 
@@ -45,12 +45,12 @@ export default function Navbar ({ mode, title }) {
                         }
                     </Popover.Group>
                     <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 space-x-5">
-                        <Link to="/signin" className={ `text-base font-medium text-${ mode }-500 hover:bg-${ mode }-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium` }>
+                        <Link to="/signin" className={ `text-base font-medium text-${ mode }-500 bg-${ mode }-700 text-white px-3 py-2 rounded-md text-sm font-medium` }>
                             Sign in
                         </Link>
                         <Link
                             to="/signup"
-                            className={ `text-base font-medium text-${ mode }-500 hover:bg-${ mode }-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium` }
+                            className={ `text-base font-medium text-${ mode }-500 bg-${ mode }-700 text-white px-3 py-2 rounded-md text-sm font-medium` }
                         >
                             Sign up
                         </Link>

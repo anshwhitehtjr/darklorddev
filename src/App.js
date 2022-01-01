@@ -13,7 +13,7 @@ import {
 
 function App () {
   const [alert, setAlert] = useState(null);
-  const mode = 'indigo';
+  const mode = 'blue';
 
   const showAlert = (message, type) => {
     setAlert({
@@ -27,7 +27,7 @@ function App () {
 
   return (
     <Router>
-      <Navbar mode={ mode } title='Demo Title' />
+      <Navbar mode={ mode } title='DarkLordDev' />
       <Alert alert={ alert } />
       <Switch>
         <Route exact path='/'>
